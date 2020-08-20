@@ -1,0 +1,234 @@
+
+#gameRules{
+	/* font-weight: bold; */
+	color: black;
+	font-style: italic;
+	margin: auto;
+	width: 30%;
+	border: 3px solid #c62d1f;
+	padding: 10px;
+	text-align: left;
+}
+.header{
+	/* position: fixed; */
+    width: 100%;
+    height: 94%;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+    /* border: black solid; */
+    /* background-image: url('../images/backgrounds/background.jpg'); */
+    background-size: cover;
+}
+
+#divControlers{
+	width: 400px;
+	height: 800px;
+	margin: auto;
+	border: 3px solid green;
+	padding: 30px;
+}
+#canvas{
+	background-color: white;
+	border:3px solid black;
+	margin: 15px;
+	position: absolute;
+    top: 150%;
+	left: 50%;
+	height: 670px;
+	transform: translate(-60%, -60%);  
+
+}
+#game{
+	
+	border:3px solid black;
+	margin: 15px;
+	position: absolute;
+	/* position: fixed; */
+    top: 55%;
+    left: 55%;
+	transform: translate(-60%, -60%);  
+}
+footer{
+    /* width: 950px; */
+   /* width: 1230px; */
+    width: 1230px;
+    height: auto;
+    min-height: 6%;
+    margin: auto;
+    position: relative;
+  	bottom: 0;
+    /* text-align: center; */
+    color: black;
+    font-size: 15px;
+}
+/* #newGameBut{
+	
+	right: 0;
+	
+	border: solid black;
+	padding: 0px;
+	float: right;
+} */
+body {
+	background-image: url('./images/shofiya-jerrin-bg.jpg');
+  }
+/* style for buttons */
+.myButton {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+input::placeholder {
+  font-size: 16px;
+  color: black;
+}
+/* .content{
+  font-size: 20px;
+  background-color: whitesmoke;
+  margin: 40px;
+  width: 65%;
+  padding: 20px;
+  margin-top: 150px;
+  text-align: left;
+  
+} */
+
+
+body
+{
+	/* background-color: black; */
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	/* background: url(college.png); */
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.container
+{
+
+  /* position: absolute; */
+	top: 80%;
+	left: 50%;
+	transform: translate(0%,0%);
+	width: 700px;
+	background:yellow;
+	/* background: #fff; */
+  padding: 45px;
+  margin-left: 300px;
+	box-sizing: border-box;
+	border :1px solid rgba(0,0,0,.1);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.container h1
+{
+
+	text-align: center;
+	margin: 0 0 40px;
+	padding: 0;
+	color: rgb(66,133,244);
+	letter-spacing: 2px;
+}
+.container input
+{
+	padding: 5px;
+  margin-bottom: 30px;
+  /* margin-left: 00px; */
+	width: 55%;
+	box-sizing: border-box;
+	box-shadow: none;
+	outline: none;
+	border:none;
+	border-bottom: 2px solid #999;
+}
+.forminput{
+	background-color: yellow;
+}
+.container input[type="submit"]
+{
+	border-radius: 25px;
+	font-size: 20px;
+	height: 40px;
+	cursor : pointer;
+	background: rgb(66,133,244);
+	color: #fff;
+	margin-bottom: 0;
+}
+.container input[type="submit"]:hover
+{
+	background: #34F458;
+	color: #fff;
+}
+
+.container form div
+{
+	position: relative;
+}
+.container form div label
+{
+	position: absolute;
+	top: 3px;
+	pointer-events: none;
+	left: 0;
+	transition: .5s;
+}
+.container input:focus ~label,
+.container input:valid ~label
+{
+	left: 0;
+	top: -20px;
+	color: rgb(66,133,244);
+	font-size: 12px;
+	font-weight: bold;
+}
+.container input:focus,
+.container input:valid
+{
+	border-bottom: 2px solid rgb(66,133,244);
+}
+.error_form
+{
+	padding-bottom: 30px;
+	top: 12px;
+	color: rgb(216, 15, 15);
+    font-size: 15px;
+    font-family: Helvetica;
+    /* text-align: center; */
+}
+.but1 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 300px;
+  
+}
+#but1 {
+  border-radius: 50%;
+}

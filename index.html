@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- boots -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- boots -->
+
+<script src="./jquery-3.4.1.slim.min.js"></script>
+	<link rel="stylesheet" href="./styleSheet.css">
+	<script type="text/javascript" src="./app.js"></script>
+
+	<script type="text/javascript" src="./setting.js"></script>
+	<script type="text/javascript" src="./registerAndLogin.js"></script>
+
+	<script type="text/javascript" src="./replaceWindow.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	
+	<!-- datePicker -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		 
+	<!-- dialog -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- dialog -->
+
+
+</head>
+
+<body>
+	
+	<div class ="header" style="padding-left: 60px;">
+		<div style="color: black; text-align: left; font-size: 20px; font-style: oblique;" >
+			<b>created by dean blinder and yzhar chrenov</b>
+		</div>
+
+	</div>
+	<div id='Welcome' class='section'>
+		<div class='logo' style="text-align:center">
+			<img src="./images/PacManLogo.png" style="width:30%">
+		</div>
+		<div id="buttons" class="section" style="text-align:center">
+			<button id="WelcomeButton" type="button" onclick="showGameRules()" class="myButton"
+				style="width: 10%;">Welcome</button>
+
+			<button id="RegisterButton" type="button" onclick="showRegister()" class="myButton"
+			style="width: 10%;">Register</button>
+
+			<button id="LoginButton" type="button" onclick="showLogin()" class="myButton"
+				style="width: 10%;">Login</button>
+		
+				<!-- <button id="SetButton" type="button" onclick="showSetting()" class="myButton"
+				style="width: 10%;">Setting</button> -->
+
+				<!-- <button id="gameButton" type="button" onclick="showGame()" class="myButton"
+				style="width: 10%;">game</button> -->
+				<!-- <button id="AboutButton" type="button" onclick="showAbout()" class="myButton"
+				style="width: 10%;">About</button> -->
+				<button id="AboutButton" 	style="width: 10%;" type="button" class="myButton"  data-toggle="modal" data-target=".bd-example-modal-lg" onclick="showAbout()">About</button>
+
+				<div  class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-content">
+
+							<div class="modal-header">
+							  <h5 class="modal-title h4" id="myExtraLargeModalLabel">About</h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							  </button>
+							</div>
+							<div class="modal-body">
+							 This game created by yzhar chernov and dean blinder.
+							 the plugin we used was the datepicker,
+							 the templete we used was the register and login pages.
+							 in the beginning we did not know how detect our errors 
+							 and we spend a lot of time not knowing what was wrong.
+							</div>
+						  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+
+		<div id="gameRules" class="container" style="padding-left: 30px; font-weight: bold;">
+			<p>
+				<h1 style="color: #c62d1f; font-weight: bold;">GAME RULES</h1>
+				-  eat as much ballls as you can,<br>
+				-  small balls are 5 points,<br>
+				-  medium balls are 15 points,<br>
+				-  large balls are 25 points.<br>
+				-  if you eat the clock you gain time.<br>
+				-  if you eat the coronaVirus you gain one life.<br>
+				-  you have 5 life if ghost eats you, you lose one life.<br>
+				   <p style="font-size: 50px; text-align: center; color: rgb(39, 40, 58);">good luck.</p>
+			</p>
+		</div>
+<div id="RegisterSection" style="display: none;" >
+	<div class="container" style="width: 700px; height: 600px;">
+		<h1 style="color: #c62d1f; font-weight: bold;">REGISTER</h1>
+		<form id="registration_form" onsubmit="allfill()" style="height: 500px; ">
+			<div>
+				<input class="forminput" type="text" id="form_username" name="" >				
+				<span class="error_form" id="userName_error_message"></span>
+				<label>
+					user Name
+				</label>	
+			</div>
+			<div>		
+				<input class="forminput" type="text" id="form_fname" name="" >			
+				<span class="error_form" id="fname_error_message" ></span>			
+				<label>
+					First Name
+				</label>	
+			</div>
+			<div>
+				<input class="forminput" type="text" id="form_sname" name="" style="height: 2px;" >			
+				<span class="error_form" id="sname_error_message"></span>
+				<label>
+					Last Name
+				</label>	
+			</div>
+			<div>
+				<input  class="forminput" type="email" id="form_email" name=""  >
+			
+				<span class="error_form" id="email_error_message"></span>
+			
+				<label>Email</label>	
+			</div>
+			<div>
+				<input class="forminput" type="password" id="form_password" name="" >
+				
+				<span class="error_form" id="password_error_message"></span>
+				
+				<label>Password</label>	
+			</div>
+			<div>
+				<p><input class="forminput" type="text" name="" id="datepickerform" placeholder="BirthDate"  autocomplete="off"></p>
+				
+				<span class="error_form" id="birthday_error_message"></span>
+				
+			</div>
+			<input id="but11" class="myButton" type="button"  value="Register"  name="" onclick="registerFunc()" >
+			
+		</form>
+		
+	</div>
+	<br>
+	<br>
+</div>
+
+
+<div id="LoginSection" style="display: none">
+	<div class="container" style="width: 400px; padding-left: 30px;">
+		<h1  style="color: #c62d1f; font-weight: bold; text-align: left;">Login</h1>
+		<form id="login_form"  action="javascript:alert( 'success!' );" style="height: 170px;">
+			<div>
+				<input class="forminput" type="text" id="login_username" name="" required="">
+				<label>userName</label>	
+			</div>
+			
+			<div>
+				<input class="forminput" type="password" id="login_password" name="" required="">
+				<label>Password</label>	
+			</div>
+			<br>
+			<span class="login_error" id="passwordUser_error_message"></span>
+			<button type="button"  value="Login"  name=""  id="LoginFormButton" class="myButton" style="width: 200px; height: 30px;" onclick="loginFunc()">Login</button>	
+		</form>
+	</div>
+	<br>
+	<br>
+</div>
+
+
+
+
+	<div id='SettingsSection' class='section' style="display: none">
+		
+		<div class="container">
+			<h1 style="font-weight: bold; color:#c62d1f ;">SETTINGS</h1>
+			<h1 style="font-size: 20px; color: #c62d1f;">to set up random setting press random</h1>
+			
+			<form action="" id="formControlers"  method="post">
+				<div>
+					
+					<input  class="forminput" id = "upKey" type="text" maxlength="1" minlength="1" required="">
+				<!-- <span class="error_form" id="upKey_error_message"></span> -->
+					<label>Choose up key:</label>
+						
+				</div>
+				<div>
+					<input class="forminput" id= "downKey" type="text" maxlength="1" minlength="1" required="">
+					<label>Choose down key:</label>
+					<!-- <span class="error_form" id="downKey_error_message"></span> -->
+					
+				</div>
+				<div>
+					
+					<input class="forminput" id= "rightKey" type="text" maxlength="1" minlength="1" required="">
+					<label>Choose right key:</label>
+					<!-- <span class="error_form" id="rightKey_error_message"></span> -->
+					
+				</div>
+				<div>
+					
+					<input class="forminput" id= "leftKey" type="text" maxlength="1" minlength="1" required="">
+					<span class="error_form" id="keys_error_message"></span>
+					
+					
+					<label>Choose left key:</label>
+				</div>
+				<div>
+					
+					<input class="forminput" id="numOfBalls" type="number" min="50" max="90" required="">
+					<span class="error_form" id="numOfBalls_error_message"></span>
+					
+					
+					<label>Choose number of balls(between 50-90):</label>
+				</div>
+				<div>
+					
+					<input  class="forminput" type="color" id="color5p"   required="">
+					<label>Choose 5 point balls:</label>
+				</div>
+				<div>
+					
+					<input class="forminput" type="color" id="color15p" required ="">
+					<label>Choose 15 point balls:</label>
+				</div>
+				<div>
+					
+					<input  class="forminput" type="color" id="color25p"  required="">
+					
+					<label>Choose 25 point balls:</label>
+				</div>
+				<span class="error_form" id="colors_error_message"></span>		
+				<div>
+					
+					<input class="forminput" id="timeOfGame" type="number" min="60"  required="">
+					<span class="error_form" id="timeOfGame_error_message"></span>
+					
+					
+					<label>set time:</label>
+				</div>
+				<div>
+					
+					<input  class="forminput" id="numberOfMansters" type="number" min="1" max="4" required="">
+					<span class="error_form" id="numberOfMansters_error_message"></span>
+					
+					
+					<label>set numer of mansters(between 1-4):</label>
+				</div>
+				<input type="button" id="randomButton" class="myButton"  value="random"  onclick="randomSetting()" name="">
+				<input type="button" id="submitButton"  class="myButton"  value="submit"   name="" onclick="submitSetting()" >
+						
+						
+			</form>
+			
+		</div>
+		<br>
+
+			
+	</div>
+
+
+	<div id='About' class='section' style="display: none">
+	</div>
+
+
+	<div id='GamePlaySection' class='section' style="display: none;" >
+		
+		<div id="life">
+			
+		</div>
+
+		<div id="life">
+			<label for="lblLife" style="color: crimson; font-weight: 800; font-size: 40px;">LIFE:</label><br>
+			<input style="background-color: green; font-size: large; color: red;" id="lblLife" type="text"  />
+		</div>
+
+		<div id="playerName">
+			<label style="color: crimson; font-weight: 800; font-size: 40px;" for="lblUser">USER NAME:</label><br>
+			<input id="lblUser" type="text" style="background-color: green; font-size: large; color: red;" />
+		</div>
+		<div id="score">
+			<label style="color: crimson; font-weight: 800; font-size: 40px;" for="lblScore">SCORE:</label><br>
+			<input id="lblScore" type="text" style="background-color: green; font-size: large; color: red;" />
+		</div>
+		<div id="time">
+			<label style="color: crimson; font-weight: 800; font-size: 40px;" for="lblTime">TIME:</label><br>
+			<input id="lblTime" type="text" style="background-color: green; font-size: large; color: red;"/>
+		</div>
+		<br>
+		<br>
+		<div id="newGameBut">
+			<button style="padding-right: 100px; color: yellow;" id="newGameButton" type="button" onclick="startNewGame()" class="myButton"
+			style="width: 150px; height: 100px;">new game</button>
+		</div>
+		
+		<div id="game">
+			<canvas id="canvas" height="780.5" width="1140"></canvas>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		
+	</div>
+	
+	
+
+	<footer style="text-align:left; font-style: oblique; font-weight: bold;">
+        <span>This game created by yzhar chrenov and dean blinder from ben gurion university in ISE department.
+        <span>deanb@post.bgu.ac.il </span> 
+		<a style="padding-bottom:25px;" style="text-align: center;" href="mailto:deanb@post.bgu.ac.il">contact</a>
+		<span>yzhar@post.bgu.ac.il  </span>
+		<a style="padding-bottom:25px;" style="text-align: center;" href="mailto:yzhar@post.bgu.ac.il">contact</a>
+    </footer>
+
+</body>
+
+</html>
