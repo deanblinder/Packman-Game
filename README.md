@@ -2,7 +2,7 @@
 
 dean blinder-305217309
  
-https://sise-web-development-environments.github.io/assignment2-dean-yzhar/
+https://sise-web-development-environments.github.io/Packman_Game/
 
 clock - Eating the clock will add 15 seconds to the game time.
 
